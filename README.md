@@ -4,6 +4,7 @@
 #Multi-modal AI-based Dynamic Mental Health Assessment System for Children in Distressed Circumstances
 
 Abstract
+
 The present invention relates to the field of Artificial Intelligence, specifically to a multi-modal AI-based dynamic mental health assessment system for children in distressed circumstances. The system comprises a multi-modal data collection module, a data preprocessing module, a feature extraction and distress identification module, and a report generation and output module.
 By collecting five categories of data—voice, micro-expressions, text, psychological tests, and behavioral trajectories—the system performs preprocessing on the raw data and establishes a mapping relationship between features and distress types through multi-modal feature fusion. This allows for the precise identification of the specific distress types and risk levels of the children, generating structured mental health assessment reports to achieve dynamic tracking and long-term monitoring of their psychological states.
 Furthermore, the invention may include an intervention scheme generation module to match differentiated intervention plans for various types of distressed children. Through multi-modal data fusion, dynamic monitoring mechanisms, and personalized intervention suggestions, this system improves the accuracy of distress type identification from 70% to over 95%.
