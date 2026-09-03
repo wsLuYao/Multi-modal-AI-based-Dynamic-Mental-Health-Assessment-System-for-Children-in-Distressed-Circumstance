@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>凤蝶之心-基于多模态人工智能感知的困境儿童心理健康动态评估数据库系统</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <aside>
+    <div class="profile">
+      <div class="profile-icon">T</div>
+      <div>
+        <div>测试账户</div>
+        <small>数据库管理后台</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#" class="active">首页</a>
+      <a href="aichat.html">AI个案分析</a>
+      <a href="#">危机监控</a>
+      <a href="#">指导干预</a>
+      <a href="#">联系我们</a>
+      <a href="login.html">退出登录</a>
+    </nav>
+  </aside>
+  <main>
+    <header>
+      <h2>凤蝶之心-基于多模态人工智能感知的困境儿童心理健康动态评估数据库系统</h2>
+      <div><img style="width: auto;height: 5vh;" src="img/icon.png"/></div>
+    </header>
+
+    <div class="cards">
+      <div class="card"><div style="font-size: 1rem;">日完成监测学生数</div><strong style="font-size: 3rem;">75</strong></div>
+      <div class="card"><div style="font-size: 1rem;">周完成监测学生数</div><strong style="font-size: 3rem;">110</strong></div>
+      <div class="card"><div style="font-size: 1rem;">困境儿童数</div><strong style="font-size: 3rem;">3484</strong></div>
+      <div class="card"><div style="font-size: 1rem;">识别准确率</div><strong style="font-size: 3rem;">89.6%</strong></div>
+    </div>
+
+    <div class="charts">
+      <div class="panel" >
+        <h4>心率变异性分析数据</h4>
+        <canvas id="lineChart" height="120"></canvas>
+        <div class="pie-grid">
+          <div class="pie-item">
+            <canvas id="pie1"></canvas>
+            <div>语音处理技术</div>
+          </div>
+          <div class="pie-item">
+            <canvas id="pie2"></canvas>
+            <div>情感反映技术</div>
+          </div>
+          <div class="pie-item">
+            <canvas id="pie3"></canvas>
+            <div>行为轨迹技术</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h4>监测年龄分布</h4>
+          <canvas id="barChart" height="120"></canvas>
+        </div>
+        <div class="panel">
+          <h4>文本分词数据采集</h4>
+          <ol class="striped-list">
+            <li>“孤独” - 1816个</li>
+            <li>“被遗弃” - 1315个</li>
+            <li>“疼痛” - 1212个</li>
+            <li>“悲伤” - 1011个</li>
+            <li>“害怕” - 810个</li>
+            <li>“无助” - 510个</li>
+            <li>其他 - 13510个</li>
+          </ol>
+        </div>
+        <div class="panel">
+          <h4>雷达评分</h4>
+          <canvas id="radarChart" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI个案分析</title>
+      <link rel="stylesheet" href="css/aichat.css">
+
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">AI</div><h1>AI数据库个案分析</h1></div>
+
+      <div class="upload-card">
+        <div id="dropzone" class="dropzone">
+          <p>把个案数据文件拖到这里，或点击选择文件（支持多个案同时上传）</p>
+          <input id="fileInput" type="file" multiple style="display:none"/>
+          <button id="chooseBtn" class="btn">选择文件</button>
+        </div>
+        <div class="files-list" id="filesList"></div>
+      </div>
+
+      <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+        <div class="small">上传模式: <code>上传演示</code></div>
+        <button id="clearBtn" class="btn">清空列表</button>
+      </div>
+    </aside>
+
+    <section class="chat">
+      <div class="messages" id="messages" aria-live="polite"></div>
+
+      <div class="input-row">
+        <textarea id="input" placeholder="输入消息后按回车发送（Shift+Enter 换行）"></textarea>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <button id="sendBtn" class="btn">发送</button>
+          <button id="attachBtn" class="btn">上传并发送</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+    <script src="js/aichat.js"></script>
+
+    
+</body>
+</html>

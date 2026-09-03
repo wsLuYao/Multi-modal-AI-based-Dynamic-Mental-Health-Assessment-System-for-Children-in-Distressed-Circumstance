@@ -1,0 +1,158 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+        background-image: url(../img/bg.png);
+      background-color: #0d0d0d;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      gap: 5vh;
+    }
+
+    .login-container {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .login-container h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .login-container p {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 10px;
+      background: #262626;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .login-container input:focus {
+      background: #333;
+      box-shadow: 0 0 0 2px #4a90e2;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 14px;
+      background: #4a90e2;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: #357ABD;
+    }
+
+    .login-container .extra {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .login-container .extra a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    .login-container .extra a:hover {
+      text-decoration: underline;
+    }
+
+    .textarea{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #title{
+        color: #fff;
+        font-weight: 700;
+        font-size: 10rem;
+    }
+   
+.typing-text {
+  text-align: center;
+  font-weight: 700;
+        font-size: x-large;
+  margin-bottom: 30px;
+  color: #4a90e2;
+  min-height: 28px; /* 保证区域不抖动 */
+}
+.cursor {
+  display: inline-block;
+        font-size: x-large;
+  color: #4a90e2;
+  margin-left: 3px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+
+    /* 进度条遮罩层 */
+    #loadingOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+    
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      color: white;
+      font-size: 18px;
+    }
+
+    .progress-bar {
+      width: 80%;
+      height: 12px;
+      background: #333;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #4a90e2, #357ABD);
+      transition: width 2s linear;
+    }
+
+    

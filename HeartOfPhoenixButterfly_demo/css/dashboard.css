@@ -1,0 +1,137 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+    }
+    aside {
+      width: 240px;
+      height: 100vh;
+      background: #fff;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      flex-shrink: 0;
+      position: fixed;
+    }
+    aside .profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+    aside .profile-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #6366f1, #06b6d4);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+    }
+    aside nav a {
+      display: block;
+      padding: 8px 12px;
+      margin: 6px 0;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #444;
+    }
+    aside nav a:hover, aside nav a.active {
+      background: #f3f4f6;
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+      margin-left: 300px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+    .panel {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+   
+    .pie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .pie-item {
+      text-align: center;
+    }
+
+    /* 自适应布局 */
+    @media (max-width: 1024px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      aside nav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .charts {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h2 {
+        font-size: 1rem;
+      }
+      aside .profile-icon {
+        width: 36px;
+        height: 36px;
+      }
+      .card strong {
+        font-size: 1.2rem;
+      }
+    }
+
+    .striped-list li:nth-child(odd) {
+  background-color: #f9f9f9; /* 白色 */
+}
+.striped-list li:nth-child(even) {
+  background-color: #eaeaea; /* 浅灰 */
+}
+.striped-list li {
+  padding: 6px 12px;
+  border-radius: 4px;
+}
