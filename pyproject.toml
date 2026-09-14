@@ -24,7 +24,7 @@ dependencies = ["python-docx>=1.1,<2"]
 
 [project.optional-dependencies]
 desktop = ["pywebview>=5,<7"]
-dev = ["pytest>=8,<9", "ruff>=0.9,<1"]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1"]
 
 [project.scripts]
 phoenix-assessment = "phoenix_assessment.desktop:main"
