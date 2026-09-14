@@ -4,6 +4,12 @@ All notable changes to this project are documented here. The format follows Keep
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-09-15
+
+### Fixed
+
+- Restored the advertised Python 3.10 compatibility for UTC timestamps.
+
 ## [0.1.0] - 2026-09-15
 
 ### Added
@@ -21,5 +27,6 @@ All notable changes to this project are documented here. The format follows Keep
 - Hard-coded demo credentials and unsupported accuracy or operational claims.
 - Five-sample serialized random-forest artifacts and hard-coded PDF executable paths.
 
-[Unreleased]: https://github.com/wsLuYao/Multi-modal-AI-based-Dynamic-Mental-Health-Assessment-System-for-Children-in-Distressed-Circumstance/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/wsLuYao/Multi-modal-AI-based-Dynamic-Mental-Health-Assessment-System-for-Children-in-Distressed-Circumstance/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/wsLuYao/Multi-modal-AI-based-Dynamic-Mental-Health-Assessment-System-for-Children-in-Distressed-Circumstance/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/wsLuYao/Multi-modal-AI-based-Dynamic-Mental-Health-Assessment-System-for-Children-in-Distressed-Circumstance/releases/tag/v0.1.0

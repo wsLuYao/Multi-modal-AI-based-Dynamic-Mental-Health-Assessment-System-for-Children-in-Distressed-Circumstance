@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 import re
 import uuid
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from .analysis import analyze_text
@@ -54,7 +54,9 @@ class AssessmentAPI:
         analysis = analyze_text(text)
 
         case_id = uuid.uuid4().hex[:10]
-        created_at = datetime.now(UTC).isoformat(timespec="seconds")
+        # ``datetime.UTC`` was introduced in Python 3.11; ``timezone.utc`` keeps
+        # the advertised Python 3.10 support without changing the timestamp.
+        created_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
         record: dict[str, object] = {
             "case_id": case_id,
             "created_at": created_at,
