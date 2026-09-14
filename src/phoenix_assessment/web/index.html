@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' file:; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+  <title>凤蝶之心 · 文本信号分析研究原型</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="返回顶部">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M24 22C16 6 3 7 5 19c1 7 8 10 17 8-7 5-11 12-7 16 5 4 9-5 9-15 0 10 4 19 9 15 4-4 0-11-7-16 9 2 16-1 17-8C45 7 32 6 24 22Z"/></svg>
+      </span>
+      <span><strong>凤蝶之心</strong><small>Phoenix Butterfly</small></span>
+    </a>
+    <div class="top-pills">
+      <span class="pill"><i></i>本地处理</span>
+      <span class="pill neutral">Research prototype</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">TEXT-SIGNAL BASELINE · 文本信号基线</p>
+        <h1>把演示结果，放回<br><span>专业复核</span>的正确位置</h1>
+        <p class="lede">读取小型 DOCX 个案材料，以透明关键词规则呈现可解释线索。默认仅保存在当前会话，不上传原文、不替代心理专业判断。</p>
+      </div>
+      <div class="hero-card" aria-label="使用边界">
+        <div class="hero-card-icon">!</div>
+        <div>
+          <strong>不是临床工具</strong>
+          <p>不得用于自动诊断、独立筛查、风险处置或资源分配。发现紧急线索时，应立即按所在机构规范转由专业人员处理。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace-grid">
+      <form id="assessment-form" class="panel input-panel">
+        <div class="panel-heading">
+          <div><span class="step">01</span><h2>准备演示个案</h2></div>
+          <span class="privacy-tag">会话内存储</span>
+        </div>
+
+        <label class="field"><span>个案代号 <small>请勿填写真实姓名</small></span>
+          <input id="alias" name="alias" maxlength="40" autocomplete="off" placeholder="例如：DEMO-001" required>
+        </label>
+        <div class="field-row">
+          <label class="field"><span>年龄段</span>
+            <select id="age-group" name="age_group">
+              <option value="未填写">未填写</option>
+              <option value="6–11 岁">6–11 岁</option>
+              <option value="12–14 岁">12–14 岁</option>
+              <option value="15–17 岁">15–17 岁</option>
+            </select>
+          </label>
+          <label class="field"><span>资料来源</span>
+            <select id="method" name="method">
+              <option value="合成叙事样例">合成叙事样例</option>
+              <option value="人工去标识化材料">人工去标识化材料</option>
+              <option value="其他演示材料">其他演示材料</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="dropzone" id="dropzone">
+          <input id="case-file" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+          <span class="upload-icon" aria-hidden="true">↥</span>
+          <strong id="file-label">选择一个 DOCX 文件</strong>
+          <small>文件不超过 5 MiB；原文仅在内存中解析</small>
+        </label>
+        <label class="consent"><input id="demo-confirm" type="checkbox" required><span>我确认材料已去标识化，并理解本软件仅供研究演示。</span></label>
+        <button id="submit-button" class="primary-button" type="submit"><span>运行文本基线</span><b aria-hidden="true">→</b></button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <section class="panel result-panel" aria-labelledby="result-title">
+        <div class="panel-heading">
+          <div><span class="step">02</span><h2 id="result-title">查看可解释线索</h2></div>
+          <span id="result-state" class="result-state">等待输入</span>
+        </div>
+        <div id="empty-result" class="empty-state">
+          <div class="orb"><span></span></div>
+          <strong>结果会在这里出现</strong>
+          <p>类别分值代表关键词覆盖程度，不是概率、准确率或临床风险。</p>
+        </div>
+        <div id="result" class="result" hidden>
+          <div class="summary-cards">
+            <article><small>主要线索类别</small><strong id="primary-category">—</strong></article>
+            <article><small>人工复核优先级</small><strong id="review-priority">—</strong></article>
+            <article><small>文本信号指标</small><strong id="risk-indicator">—</strong></article>
+          </div>
+          <h3>关键词覆盖分</h3>
+          <div id="category-bars" class="category-bars"></div>
+          <div id="urgent-note" class="urgent-note" hidden>检测到需要优先人工复核的显式词语。请停止自动化解释并遵循机构危机处置流程。</div>
+        <div class="result-actions"><a id="report-link" class="secondary-button" target="_blank" rel="noopener" hidden>打开可打印记录</a></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel history-panel">
+      <div class="panel-heading">
+        <div><span class="step">03</span><h2>本次会话记录</h2></div>
+        <button id="clear-history" class="text-button" type="button">清空</button>
+      </div>
+      <p id="storage-mode" class="storage-mode">默认不会写入持久化历史文件。</p>
+      <div id="history" class="history-list"><p class="history-empty">暂无记录</p></div>
+    </section>
+  </main>
+
+  <footer><span>凤凰蝶之心 · Open research prototype</span><span>Human review first · Privacy by default</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+name: Feature request / 功能建议
+description: Propose an improvement and describe its safety implications.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: User need
+      description: What problem should be solved, and for whom?
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Privacy, safeguarding, and misuse considerations
+      description: Explain new data flows, possible harms, and human oversight.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data confirmation
+      options:
+        - label: I will use synthetic data in examples, tests, screenshots, and discussion.
+          required: true

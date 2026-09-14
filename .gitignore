@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local runtime and sensitive artifacts
+runtime/
+history.json
+reports/
+temp_*.docx
+*.docx
+*.pdf
+*.pkl
+*.pickle
+*.joblib
+
+# Secrets and local configuration
+.env
+.env.*
+*.key
+*.pem
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

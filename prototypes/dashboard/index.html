@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:">
+  <title>凤蝶之心 · 合成数据仪表板</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside>
+    <div class="brand"><span>凤</span><div><strong>凤蝶之心</strong><small>DESIGN PROTOTYPE</small></div></div>
+    <nav aria-label="主导航">
+      <button class="active" type="button">总览</button>
+      <button type="button">个案复核</button>
+      <button type="button">趋势设计</button>
+      <button type="button">设置</button>
+    </nav>
+    <div class="prototype-note"><b>合成演示</b><p>本页面不连接后端，所有数值均为界面占位数据。</p></div>
+  </aside>
+  <main>
+    <header><div><p>OVERVIEW · 视觉原型</p><h1>研究演示总览</h1></div><span id="clock">—</span></header>
+    <section class="notice"><strong>数据说明</strong><span>以下指标完全由固定合成数据生成，不代表真实人群、识别准确率或服务成效。</span></section>
+    <section class="metrics" aria-label="合成指标">
+      <article><small>今日演示文档</small><strong>12</strong><span>synthetic</span></article>
+      <article><small>等待人工复核</small><strong>4</strong><span>synthetic</span></article>
+      <article><small>本地会话记录</small><strong>18</strong><span>synthetic</span></article>
+      <article><small>原文外发次数</small><strong>0</strong><span>privacy default</span></article>
+    </section>
+    <section class="dashboard-grid">
+      <article class="panel trend-panel">
+        <div class="panel-title"><div><small>DEMO TREND</small><h2>合成文本信号趋势</h2></div><span>最近 7 次</span></div>
+        <div class="chart" aria-label="合成趋势折线图">
+          <div class="axis"><span>.75</span><span>.50</span><span>.25</span><span>.00</span></div>
+          <svg viewBox="0 0 700 250" role="img" aria-label="从 0.22 到 0.45 的合成趋势">
+            <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#22a398" stop-opacity=".26"/><stop offset="1" stop-color="#22a398" stop-opacity="0"/></linearGradient></defs>
+            <path class="area" d="M0 190 L110 165 L220 180 L330 124 L440 146 L550 102 L700 112 L700 250 L0 250Z"/>
+            <path class="line" d="M0 190 L110 165 L220 180 L330 124 L440 146 L550 102 L700 112"/>
+            <g class="dots"><circle cx="0" cy="190" r="5"/><circle cx="110" cy="165" r="5"/><circle cx="220" cy="180" r="5"/><circle cx="330" cy="124" r="5"/><circle cx="440" cy="146" r="5"/><circle cx="550" cy="102" r="5"/><circle cx="700" cy="112" r="5"/></g>
+          </svg>
+        </div>
+        <div class="dates"><span>样例 1</span><span>样例 2</span><span>样例 3</span><span>样例 4</span><span>样例 5</span><span>样例 6</span><span>样例 7</span></div>
+      </article>
+      <article class="panel categories-panel">
+        <div class="panel-title"><div><small>KEYWORD COVERAGE</small><h2>类别覆盖示意</h2></div></div>
+        <div id="category-list" class="category-list"></div>
+      </article>
+      <article class="panel queue-panel">
+        <div class="panel-title"><div><small>REVIEW QUEUE</small><h2>合成人工复核队列</h2></div><button id="refresh" type="button">重排</button></div>
+        <div id="queue" class="queue"></div>
+      </article>
+      <article class="panel guardrail-panel">
+        <div class="shield">✓</div>
+        <div><small>GUARDRAIL</small><h2>人类复核优先</h2><p>研究原型只呈现可解释文本信号；专业人员负责语境判断、风险处置与最终记录。</p></div>
+      </article>
+    </section>
+  </main>
+  <script src="dashboard.js"></script>
+</body>
+</html>
