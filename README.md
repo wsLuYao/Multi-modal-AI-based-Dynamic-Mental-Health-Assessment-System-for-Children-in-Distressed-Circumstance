@@ -1,5 +1,6 @@
 <p align="center">
   <img src="docs/assets/hero.svg" alt="Phoenix Butterfly — explainable text signals, human judgement first" width="100%">
+    <b>融合多模态感知的“LET”全周期困境儿童心理健康动态评估系统</b>
 </p>
 
 <p align="center">
